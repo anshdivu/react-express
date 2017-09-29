@@ -13,9 +13,13 @@ export default class Todo extends Component {
 }
 
 function ItemList(props) {
-  return <ul>{props.items.map(renderItem)}</ul>;
+  return (
+    <div className='panel-block'>
+      <ul>{props.items.map(renderItem)}</ul>
+    </div>
+  );
+}
 
-  function renderItem(item) {
-    return <li key={item.id}>{item.value}</li>;
-  }
+function renderItem(item) {
+  return <li key={item.id}>{item.value}</li>;
 }

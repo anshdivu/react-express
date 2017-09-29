@@ -23,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='panel'>
         <Header title={this.state.title} />
         <Todo items={this.state.items} onCreate={this.createItem} />
       </div>
@@ -44,7 +44,7 @@ class App extends Component {
 }
 
 function Header(props) {
-  return <h1>{props.title}</h1>;
+  return <h1 className='panel-heading'>{props.title}</h1>;
 }
 
 export default App;

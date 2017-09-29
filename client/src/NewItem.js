@@ -28,9 +28,8 @@ export default class NewItem extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} className='panel-block'>
         <ItemInput value={this.state.value} onChange={this.onInput} />
-        <input type="submit" value="Submit" />
       </form>
     );
   }
@@ -38,9 +37,6 @@ export default class NewItem extends Component {
 
 function ItemInput(props) {
   return (
-    <label>
-      ToDo:
-      <input type="text" value={props.value} onChange={props.onChange} />
-    </label>
+    <input type="text" value={props.value} onChange={props.onChange} className='input is-full-width' placeholder='Add a todo!'/>
   );
 }
